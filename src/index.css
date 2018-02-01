@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Univers Next Pro;
+  font-style: normal;
+  font-weight: light;
+  src:
+    local(UniversNextPro),
+    local(UniversNextPro-Thin),
+    url(/fonts/UniversNextPro-Thin.otf) format('opentype');
+}
+
+html {
+  font-family: Univers Next Pro;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(236, 236, 231);
+}
+
+input, textarea, select, p {
+  font-family: Univers Next Pro;
+}

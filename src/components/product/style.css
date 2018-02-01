@@ -1,0 +1,146 @@
+body {
+  /*background: black;*/
+}
+
+.picture {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-height: 25vw;
+  max-width: 25vw;
+}
+
+.productbox {
+  border-radius: 10px;
+  background: transparent;
+  width: 30%;
+  margin-bottom: 55px;
+}
+
+.picturebox {
+  text-align: center;
+  height: 200px;
+  z-index: -100;
+}
+
+.name {
+  text-align: center;
+  width: 100%;
+}
+
+.hoverbox {
+  position: relative;
+}
+
+.hoverbox:hover .description {
+  display: block;
+}
+
+.description {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  padding-top: 50px;
+  border-radius: 15px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(192,192,192,1);
+  /*background: rgba(255, 255, 255, 0.8)*/
+}
+
+.information {
+  border-radius: 50%;
+  position: relative;
+  width: 15%;
+  height: 4vw;
+  background: rgb(249, 168, 0);
+  border: 2px solid rgb(39, 41, 43);
+  margin: auto;
+  cursor: context-menu;
+  color: rgb(39, 41, 43);
+  font-size: 30px;
+}
+
+.informationbox {
+  margin-top: 170px;
+}
+
+button:focus {
+    outline:none;
+}
+
+.list {
+  padding-bottom: 10px;
+}
+
+.checkboxstyle {
+  background-color: rgb(39, 41, 43);
+  display: inline-block;
+  width: 100%;
+  height: 600px;
+  cursor: pointer;
+  border-radius: 15px;
+  color: rgb(249, 168, 0);
+  border: 5px solid rgb(236, 236, 231);
+
+}
+
+.checkboxpick input[type=checkbox]{
+  display: none;
+}
+
+.checkboxpick input[type=checkbox]:checked + .checkboxstyle {
+  background-color: rgb(249, 168, 0);
+  border: 0;
+  color: rgb(39, 41, 43);
+}
+
+@media (max-width: 600px) {
+  .productbox {
+    width: 100%;
+    margin-bottom: 55px;
+  }
+
+  .picture {
+    max-height: 65vw;
+    max-width: 65vw;
+  }
+
+  .information {
+    height: 11vw;
+    width: 13%;
+  }
+}
+
+@media (min-width:601px) and (max-width:700px){
+  .productbox {
+    width: 100%;
+  }
+
+  .picture {
+    max-height: 55vw;
+    max-width: 55vw;
+  }
+
+  .information {
+    height: 8vw;
+    width: 10%;
+  }
+}
+
+@media (min-width:701px) and (max-width:1000px){
+  .productbox {
+    width: 45%;
+  }
+
+  .picture {
+    max-height: 40vw;
+    max-width: 40vw;
+  }
+
+  .information {
+    height: 7vw;
+    width: 15%;
+  }
+}

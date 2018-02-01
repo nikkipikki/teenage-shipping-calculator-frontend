@@ -1,0 +1,25 @@
+.attributes {
+  margin-top: -360px;
+  width: 400%;
+  background: black;
+  color: rgb(249, 168, 0);
+  text-align: left;
+  position: absolute;
+  border: 2px solid rgb(249, 168, 0);
+  padding: 10px;
+  left: -150%;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.typemeasurment {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+}
+
+.measurments {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
