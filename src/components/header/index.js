@@ -16,7 +16,7 @@ class Header extends React.Component {
       <div className="largeheadercontainer" id="home">
         <h1 id="largeheader">shipping calculator</h1>
         <a href="#chosen">
-          <div className="basketcontainer grow">
+          <div className="basketcontainer grow3">
             <div className="basketicon"><p id="yellow">{this.dontShow()}</p></div>
           </div>
         </a>

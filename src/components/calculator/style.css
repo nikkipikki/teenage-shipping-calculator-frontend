@@ -8,9 +8,11 @@
   color: rgb(39, 41, 43);
   /*margin-bottom: 50px;*/
   background: rgb(236, 236, 231);
+  margin-bottom: 100px;
 }
 
 .bestalternative {
+  margin: 0;
   opacity: 0.8;
   cursor: pointer;
   border: none;
@@ -29,6 +31,9 @@
 .grow2 { transition: all .2s ease-in-out; }
 .grow2:hover { transform: scale(1.02); }
 
+.grow3 { transition: all .2s ease-in-out; }
+.grow3:hover { transform: scale(1.1); }
+
 .printedship {
   width: 30%;
   text-align: left;
@@ -39,9 +44,32 @@
 }
 
 .bestalternativecontainer {
-  width: 30%;
+  width: 50%;
   margin: auto;
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
+}
+
+.goodorbad {
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+  margin: 0;
+  margin-top: 5px;
+}
+
+
+#bestoption {
+  color: #f9a800;
+  margin: 0;
+}
+
+/*#underline {
+  text-decoration: underline;
+}*/
+
+#linethrough {
+  text-decoration: line-through;
+  margin: 0;
 }

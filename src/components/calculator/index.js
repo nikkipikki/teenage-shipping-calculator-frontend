@@ -10,20 +10,20 @@ class Calculator extends React.Component {
       UpsWW: 0,
       FedexUS: 0,
       FedexEU: 0,
-      FedexWW: 0
+      FedexWW: 0,
+      totalquantity: 0
     }
   }
 
-  printShip = () => ((
-    <div>
-      {this.props.values.map(p => (
-        <div>
-          <p>{p.name}</p>
-          <p>{p.quantity}</p>
-        </div>
-      ))}
-    </div>
-  ))
+  calculateTotalBoxes= () => {
+    let total = 0
+    this.props.values.map(p => {
+      total += Number.parseInt(p.quantity, 10)
+    })
+    this.setState({
+      totalquantity: total
+    })
+  }
 
   getVolume = name => {
     let findVolume = 0
@@ -55,8 +55,7 @@ class Calculator extends React.Component {
       console.log("Server Response...")
       console.log(json)
       this.calculateTotalShippingCost(json)
-      // console.log(this.bestShipping)
-      // this.bestShipping()
+      this.calculateTotalBoxes()
     })
   }
 
@@ -94,27 +93,45 @@ class Calculator extends React.Component {
     })
   }
 
-  bestShipping = () => {
-    if (this.state.UpsUS < this.state.FedexUS) {
-      return <div className="bestalternativecontainer"><h1>best</h1><div className="bestalternative"></div><h1>:</h1><h1>upsUS: {this.state.UpsUs} $</h1></div>
-    } else {
-      return <div className="bestalternativecontainer"><h1>best</h1><div className="bestalternative"></div><h1>:</h1><h1>fedexUS: {this.state.FedexUS} $</h1></div>
+  bestAlternative = () => {
+    const best = {
+      cheap: "",
+      expensive: "",
+      cheapName: "",
+      expensiveName: ""
     }
+    if (this.state.UpsUS < this.state.FedexUS) {
+      best.cheap = this.state.UpsUS
+      best.expensive = this.state.FedexUS
+      best.cheapName = "ups"
+      best.expensiveName = "fedex"
+    } else {
+      best.cheap = this.state.FedexUS
+      best.expensive = this.state.UpsUS
+      best.cheapName = "fedex"
+      best.expensiveName = "ups"
+    }
+    return (
+      <div>
+        <div className="bestalternativecontainer">
+          <div className="bestalternative" />
+          <h1>shipping options:</h1>
+          <div className="goodorbad">
+            <h1 id="bestoption">{best.cheapName} {best.cheap} $</h1>
+            <h1 id="linethrough">{best.expensiveName} {best.expensive} $</h1>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   render() {
     return (
       <div className="calculatedproducts">
-        <h1>CALCULATOR</h1>
-        <div className="printedship">
-          {/* <p>{this.printShip()}</p> */}
-          <p>upsUS: {this.state.UpsUS} $</p>
-          <p>I</p>
-          {/* <p>upsEU: {this.state.UpsEU} $</p>
-          <p>upsWW: {this.state.UpsWW} $</p> */}
-          <p>fedexUS: {this.state.FedexUS} $</p>
-        </div>
-        <p>{this.bestShipping()}</p>
+        <h1>shipping total boxes: {this.state.totalquantity}</h1>
+        {/* <div className="printedship">
+        </div> */}
+        <p>{this.bestAlternative()}</p>
         {/* <p>fedexEU: {this.state.FedexEU} $</p>
           <p>fedexWW: {this.state.FedexWW} $</p> */}
       </div>

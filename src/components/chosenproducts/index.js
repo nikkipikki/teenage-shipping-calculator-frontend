@@ -17,6 +17,14 @@ toggleHidden = () => {
   })
 }
 
+getcalculateButtonText = () => {
+  if (this.state.isHidden) {
+    return "calculate"
+  } else {
+    return "re-count"
+  }
+}
+
 onClickClear = () => {
   this.props.onClear(this.props.index)
 }
@@ -70,26 +78,33 @@ handleInputQty = (event, productName) => {
   render() {
     return (
       <div>
+        {!this.state.isHidden && <Calculator
+          chosenProducts={this.props.chosenProducts}
+          values={this.state.quantity} />}
         {/* {this.state.isHidden && */}
         <div className="chosenproducts" id="chosen">
-          <h1 className="chosenproductsheader"> calculating products: {this.props.chosenProducts.length}</h1>
-          <h1>add quantity:</h1>
+          {/* <h1 className="chosenproductsheader"> calculating products: {this.props.chosenProducts.length}</h1> */}
+          <h1>add boxes:</h1>
           <div className="printednames">
             <p>{this.printNames()}</p>
-            <div className="shipbuttoncontainer">
-              <button className="shipbutton grow" onClick={this.toggleHidden} />
-            </div>
+            <a href="#scrolldown">
+              <div className="shipbuttoncontainer">
+                <button className="shipbutton grow3" onClick={this.toggleHidden}>
+                  <p id="calculatetext"> {this.getcalculateButtonText()}</p>
+                </button>
+              </div>
+            </a>
           </div>
           <a href="#home">
-            <div className="deletebuttoncontainer">
+            <div className="deletebuttoncontainer" id="scrolldown">
               <button className="deletebutton" onClick={this.onClickClear} />
             </div>
           </a>
         </div>
-        {/* } */}
-        {!this.state.isHidden && <Calculator
+         {/* } */}
+        {/* {!this.state.isHidden && <Calculator
           chosenProducts={this.props.chosenProducts}
-          values={this.state.quantity} />}
+          values={this.state.quantity} />} */}
         {/* {this.state.isHidden && */}
         {/* } */}
       </div>
