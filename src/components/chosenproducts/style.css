@@ -106,7 +106,7 @@ input {
   }
 
   .printednames {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -116,7 +116,7 @@ input {
   }
 
   .printednames {
-    width: 80%;
+    width: 60%;
   }
 }
 
@@ -126,6 +126,6 @@ input {
   }
 
   .printednames {
-    width: 80%;
+    width: 60%;
   }
 }

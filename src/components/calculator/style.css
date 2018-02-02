@@ -40,11 +40,11 @@
 }
 
 .bestalternativecontainer {
-  width: 40%;
+  width: 45%;
   margin: auto;
   display: flex;
   flex-flow: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .goodorbad {
@@ -73,4 +73,26 @@
 
 #lightfont {
   color: rgb(236, 236, 231);
+}
+
+@media (max-width: 600px) {
+  .bestalternativecontainer {
+    width: 100%;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width:601px) and (max-width:700px){
+  .bestalternativecontainer {
+    width: 100%;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width:701px) and (max-width:1000px){
+  .bestalternativecontainer {
+    width: 80%;
+  }
 }
