@@ -36,7 +36,7 @@ class Calculator extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/calculate", {
+    fetch("https://shipping-calculator-prototype.herokuapp.com/calculate", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",

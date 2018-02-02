@@ -14,7 +14,7 @@ class Productfetch extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/products").then(response => (
+    fetch("https://shipping-calculator-prototype.herokuapp.com/products").then(response => (
       response.json()
     )).then(json => {
       this.setState({

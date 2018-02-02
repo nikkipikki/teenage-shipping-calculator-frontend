@@ -81,9 +81,7 @@ handleInputQty = (event, productName) => {
         {!this.state.isHidden && <Calculator
           chosenProducts={this.props.chosenProducts}
           values={this.state.quantity} />}
-        {/* {this.state.isHidden && */}
         <div className="chosenproducts" id="chosen">
-          {/* <h1 className="chosenproductsheader"> calculating products: {this.props.chosenProducts.length}</h1> */}
           <h1 id="underline">add boxes:</h1>
           <div className="printednames">
             <p>{this.printNames()}</p>
@@ -101,12 +99,6 @@ handleInputQty = (event, productName) => {
             </div>
           </a>
         </div>
-         {/* } */}
-        {/* {!this.state.isHidden && <Calculator
-          chosenProducts={this.props.chosenProducts}
-          values={this.state.quantity} />} */}
-        {/* {this.state.isHidden && */}
-        {/* } */}
       </div>
     )
   }

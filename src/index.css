@@ -9,7 +9,7 @@
   src:
     local(UniversNextPro),
     local(UniversNextPro-Thin),
-    url(/fonts/UniversNextPro-Thin.otf) format('opentype');
+    url(https://nikkipikki.github.io/teenage-shipping-calculator-frontend/font/UniversNextPro-Thin.otf) format('opentype');
 }
 
 html {
