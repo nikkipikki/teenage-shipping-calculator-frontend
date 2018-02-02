@@ -10,9 +10,6 @@ class Accordion extends React.Component {
         <p>box:{this.props.product.numberInBox}</p>
         <p>weight:{this.props.product.weight}</p>
         <p>volume:{this.props.product.volume}</p>
-        <p>value: {this.props.product.value}</p>
-        <p>{this.props.product.descriptionHarmCode}</p>
-        <p>harmcode: {this.props.product.harmcode}</p>
       </div>
     )
   }
