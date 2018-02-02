@@ -59,7 +59,7 @@ handleInputQty = (event, productName) => {
     <div>
       {this.props.chosenProducts.map(product => (
         <div>
-          <div className="nameandnumber">
+          <div className="nameandnumber" id="fontsize20">
             <p>{product.name}</p>
             <div>
               <input
@@ -84,7 +84,7 @@ handleInputQty = (event, productName) => {
         {/* {this.state.isHidden && */}
         <div className="chosenproducts" id="chosen">
           {/* <h1 className="chosenproductsheader"> calculating products: {this.props.chosenProducts.length}</h1> */}
-          <h1>add boxes:</h1>
+          <h1 id="underline">add boxes:</h1>
           <div className="printednames">
             <p>{this.printNames()}</p>
             <a href="#scrolldown">

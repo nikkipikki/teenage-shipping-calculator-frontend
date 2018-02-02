@@ -1,24 +1,14 @@
 .chosenproducts {
-  /*border: 3px solid black;*/
-  /*border-radius: 10px;*/
-  /*border-top: 3px solid rgb(39, 41, 43);
-  border-bottom: 3px solid rgb(39, 41, 43);*/
   margin: auto;
   text-align: center;
   width: 100%;
   padding: 30px;
   margin-bottom: 10px;
-  /*background: rgb(249, 168, 0);*/
   color: rgb(39, 41, 43);
 }
 
-/*.chosenproductsheader {
-  margin: auto;
-  text-align: center;
-}*/
-
 .printednames {
-  width: 50%;
+  width: 40%;
   margin: auto;
   text-align: left;
 }
@@ -27,13 +17,17 @@
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
+  margin: 0;
 }
 
 input {
+  margin-top: 10px;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 20px;
   width: 80px;
+  height: 40px;
   padding: 5px;
+  color: #f9a800;
   text-align: center;
   outline: none;
   left: 50px;
@@ -53,6 +47,11 @@ input {
   margin-left: 5px;
   font-size: 17px;
   color: #f9a800;
+}
+
+#fontsize20 {
+  font-size: 20px;
+  margin-top: 5;
 }
 
 .fromto {

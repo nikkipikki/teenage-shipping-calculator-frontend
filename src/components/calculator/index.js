@@ -114,7 +114,7 @@ class Calculator extends React.Component {
     return (
       <div>
         <div className="bestalternativecontainer">
-          <div className="bestalternative" />
+          {/* <div className="bestalternative" /> */}
           <h1 id="lightfont">shipping options:</h1>
           <div className="goodorbad">
             <h1 id="bestoption">{best.cheapName} {best.cheap} $</h1>
@@ -128,12 +128,8 @@ class Calculator extends React.Component {
   render() {
     return (
       <div className="calculatedproducts">
-        <h1 id="lightfont">total boxes: {this.state.totalquantity}</h1>
-        {/* <div className="printedship">
-        </div> */}
+        <h1 id="bestoption">total boxes: {this.state.totalquantity}</h1>
         <p>{this.bestAlternative()}</p>
-        {/* <p>fedexEU: {this.state.FedexEU} $</p>
-          <p>fedexWW: {this.state.FedexWW} $</p> */}
       </div>
     )
   }

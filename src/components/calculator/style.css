@@ -1,12 +1,7 @@
 .calculatedproducts {
-  /*border: 3px solid black;*/
-  /*border-radius: 10px;*/
   margin: auto;
   text-align: center;
-  /*padding: 30px;*/
-  /*width: 72%;*/
   color: rgb(39, 41, 43);
-  /*margin-bottom: 50px;*/
   background: rgb(39, 41, 43);
   padding: 20px;
   margin-bottom: 30px;
@@ -45,7 +40,7 @@
 }
 
 .bestalternativecontainer {
-  width: 50%;
+  width: 40%;
   margin: auto;
   display: flex;
   flex-flow: wrap;
@@ -63,12 +58,12 @@
 
 #bestoption {
   color: #f9a800;
-  margin: 0;
+  /*margin: 0;*/
 }
 
-/*#underline {
+#underline {
   text-decoration: underline;
-}*/
+}
 
 #linethrough {
   text-decoration: line-through;
